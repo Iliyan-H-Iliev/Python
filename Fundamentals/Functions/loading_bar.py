@@ -4,8 +4,6 @@ def loading_bar(percent):
         result[i] = "%"
     return result
 
-# def print_result(percent):
-
 
 numb = int(input())
 
