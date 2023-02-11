@@ -1,9 +1,14 @@
-current_version = [int(x) for x in input().split(".")]
-current_version[-1] += 1
+def divide_word(word, parts):
+    result = []
+    # word_list = [x for x in word]
+    partition_size = len(word) // parts
+    # current_word = ""
+    position = 0
+    for i in range(parts - 1):
+        result.append(word[position:position + partition_size])
+        position += partition_size
+    result.append(word[position:])
+    return result
 
-for i in range(len(current_version) - 1, 0, -1):
-    if current_version[i] > 9:
-        current_version[i] = 0
-        current_version[i - 1] += 1
 
-print(".".join(str(x) for x in current_version))
+print(divide_word("abcde1", 3))
