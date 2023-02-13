@@ -1,38 +1,6 @@
-list_input = input().split()
-counter = 0
+l = ["a", "b"]
 
-is_you_won = False
+l.remove("c")
 
-while True:
+print(l)
 
-    command = input()
-
-    if command == "end":
-        break
-
-    counter += 1
-
-    command_list = [int(x) for x in input().split()]
-    command_list.sort()
-    x1 = command_list[0]
-    x2 = command_list[1]
-
-    if x1 < 0 or x2 >= len(list_input):
-        list_input.insert(int(len(list_input) / 2), f"-{counter}a" * 2)
-        list_input.insert(int(len(list_input) / 2), f"-{counter}a" * 2)
-        print("Invalid input! Adding additional elements to the board")
-
-    if list_input[x1] == list_input[x2]:
-        print(f'Congrats! You have found matching elements - {list_input[x1]}')
-        command_list.pop(x2)
-        command_list.pop(x1)
-
-    if not list_input:
-        is_you_won = True
-        break
-
-if is_you_won:
-    print(f"You have won in {counter} turns!")
-else:
-    print("Sorry you lose :(")
-    print(f"{list_input}")
