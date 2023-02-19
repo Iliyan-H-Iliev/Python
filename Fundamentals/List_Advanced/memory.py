@@ -17,13 +17,17 @@ while True:
     x1 = command_list[0]
     x2 = command_list[1]
 
-    if x1 < 0 or x2 >= len(list_input):
+    if x1 < 0 or x2 >= len(list_input) or x1 == x2:
         list_input.insert(int(len(list_input) / 2), f"-{counter}a")
         list_input.insert(int(len(list_input) / 2), f"-{counter}a")
         print("Invalid input! Adding additional elements to the board")
+        continue
+
+    if list_input[x1] != list_input[x2]:
+        print("Try again!")
 
     if list_input[x1] == list_input[x2]:
-        print(f'Congrats! You have found matching elements - {list_input[x1]}')
+        print(f'Congrats! You have found matching elements - {list_input[x1]}!')
         list_input.pop(x2)
         list_input.pop(x1)
 
@@ -35,4 +39,4 @@ if is_you_won:
     print(f"You have won in {counter} turns!")
 else:
     print("Sorry you lose :(")
-    print(f"{list_input}")
+    print(" ".join(list_input))

@@ -18,14 +18,19 @@ while True:
 
     elif command == "Drop":
         index = int(command_arg[1])
-        if 0 > index >= len(item_list):
-            continue
-        item = item_list[index]
-        item_list.pop(index)
-        item_list.append(item)
+        if 0 <= index < len(item_list):
+            item = item_list[index]
+            item_list.pop(index)
+            item_list.append(item)
 
     elif command == "Steal":
         count = int(command_arg[1])
+
+        if count > len(item_list):
+            print(", ".join(item_list))
+            item_list.clear()
+            continue
+
         steal_items = []
         steal_index = []
 
