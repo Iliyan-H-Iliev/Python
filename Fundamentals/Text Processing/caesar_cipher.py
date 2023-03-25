@@ -1,0 +1,1 @@
+print(*list(chr(ord(x) + 3) for x in input()), sep='')
