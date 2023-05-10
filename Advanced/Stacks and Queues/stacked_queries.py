@@ -18,10 +18,10 @@ for _ in range(n):
             print(min(stck))
 
 
-nnn = len(stck)
+l = len(stck)
 
-for i in range(nnn):
-    if i != nnn - 1:
+for i in range(l):
+    if i != l - 1:
         print(stck.pop(), end=", ")
     else:
         print(stck.pop(), end=" ")
