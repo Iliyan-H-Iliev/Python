@@ -14,7 +14,7 @@ for i in range(rows - 2):
             result += sum(matrix[i + k][j:j + 3])
             small_matrix.append(matrix[i + k][j:j + 3])
 
-        if abs(result) >= best_result:
+        if result > best_result:
             best_result = result
             winner_matrix = small_matrix.copy()
 
