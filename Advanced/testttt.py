@@ -1,1 +1,6 @@
-print(ord())
+result = "SoftUNIIsGrate!"
+
+
+print(result.lower())
+
+
