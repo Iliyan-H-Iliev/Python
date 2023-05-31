@@ -1,10 +1,13 @@
+from sys import maxsize
+
+
 def valid_index(r, c):
     return 0 <= r < n and 0 <= c < n
 
 
 n = int(input())
 
-max_eggs = 0
+max_eggs = -maxsize
 field = []
 collected_eggs_list = []
 bunny_position = None
@@ -23,10 +26,10 @@ for row in range(n):
         bunny_position = (row, field[row].index("B"))
 
 direction = {
-    "up": (-1, 0),
     "down": (1, 0),
     "left": (0, -1),
     "right": (0, +1),
+    "up": (-1, 0),
 }
 
 for k, v in direction.items():
@@ -41,8 +44,8 @@ for k, v in direction.items():
 
         if el == "X":
             break
-        elif el < 0:
-            continue
+        # elif el < 0:
+        #     continue
 
         collected_eggs += el
         eggs_position.append([b_p[0], b_p[1]])
