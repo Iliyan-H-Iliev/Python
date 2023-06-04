@@ -13,6 +13,3 @@ with open(file_path, "r") as file:
             new_text = new_text.replace(symbol, "@")
 
         print(*new_text.split()[::-1])
-
-
-

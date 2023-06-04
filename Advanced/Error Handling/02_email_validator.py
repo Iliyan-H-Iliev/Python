@@ -25,7 +25,7 @@ class InvalidNameError(Exception):
     pass
 
 
-MIN_LENGTH = 4
+MIN_LENGTH = 5
 VALID_DOMAINS = (".com", ".bg", ".org", ".net")
 
 pattern_username = r'\w+'
