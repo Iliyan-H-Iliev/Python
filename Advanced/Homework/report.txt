@@ -1,0 +1,17 @@
+.pdf
+- - - Programming Basics - October 2022 - Certificate.pdf
+- - - Programming-Basics-Python-v2018.pdf
+- - - Python 3 books in 1  Python basics for Beginners + Python Automation Techniques And Web Scraping + Python For Data Science... (Vickler, Andy) (z-lib.org).epub.pdf
+- - - Python Automation Cookbook 75 Python automation ideas for web scraping, data wrangling, and processing Excel, reports, emails, and more, 2nd Edition by Jaime Buelta (z-lib.org).pdf
+- - - Python Highway 2 Books in 1 The Fastest Way for Beginners to Learn Python Programming, Data Science and Machine Learning in 3 Days (or less) + Practical Exercises Included by Cox, Aaron (z-lib.org).pdf
+- - - Python Programming 3 BOOKS IN 1 Learn machine learning, data science and analysis with a crash course for beginners. Included coding exercises for artificial intelligence, Numpy, Pandas and Ipython. b (z-lib.pdf
+- - - Python for Programmers with Introductory AI Case Studies by Paul Deitel, Harvey Deitel (z-lib.org).pdf
+- - - PythonNotesForProfessionals.pdf
+.zip
+- - - Django-3-Full-Stack-Websites-with-Python-Web-Development.zip
+- - - PYTHON-A-to-Z-Full-Course-for-Beginners.zip
+- - - Python-3-Programming-Beginner-to-Pro-Masterclass (1).zip
+- - - Python-3-Programming-Beginner-to-Pro-Masterclass.zip
+- - - SaleWebDesign.com-Artificial-Deep-learning.zip
+- - - SaleWebDesign.com-Deep-Learning -NLP-A-Z-ChatBot.zip
+- - - SaleWebDesign.com-Deep-Learning-Artificial-Neural-Networks.zip
