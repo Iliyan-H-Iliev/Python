@@ -1,6 +1,3 @@
-from project.song import Song
-
-
 class Album:
     def __init__(self, name, *args):
         self.name = name

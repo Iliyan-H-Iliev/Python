@@ -1,7 +1,6 @@
 # first zero test
 import unittest
-from project.animals.birds import Owl, Hen
-from project.animals.mammals import Mouse, Dog, Cat, Tiger
+from project.animals.birds import Owl
 from project.food import Vegetable, Fruit, Meat, Seed
 
 

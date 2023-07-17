@@ -1,5 +1,3 @@
-from typing import List
-
 from project.category import Category
 from project.topic import Topic
 
