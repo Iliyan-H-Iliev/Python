@@ -1,42 +1,41 @@
-from math import ceil
+from typing import List
 
 
-class PhotoAlbum:
-    def __init__(self, pages):
-        self.pages = pages
-        self.photos = [[] for _ in range(pages)]
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+        self.page = 0
 
-    @classmethod
-    def from_photos_count(cls, photos_count):
-        return cls(ceil(photos_count / 4))
+    def turn_page(self, page):
+        self.page = page
 
-    def add_photo(self, label):
-        for i in range(len(self.photos)):
-            if len(self.photos[i]) < 4:
-                self.photos[i].append(label)
-                return f"{label} photo added successfully on page {i+1} slot {len(self.photos[i])}"
-        return "No more free slots"
-
-    def display(self):
-        result = ''
-        for i in range(len(self.photos)):
-            result += '-' * 11 + '\n'
-            for j in range(len(self.photos[i])):
-                if j == len(self.photos[i]) - 1:
-                    result += '[]'
-                else:
-                    result += '[] '
-            result += '\n'
-        result += '-' * 11 + '\n'
-        return result
+    def __str__(self):
+        return f"This is a book with title - ' {self.title} ' written by {self.author}."
 
 
-album = PhotoAlbum(2)
-print(album.add_photo("baby"))
-print(album.add_photo("first grade"))
-print(album.add_photo("eight grade"))
-print(album.add_photo("party with friends"))
-print(album.photos)
-print(album.add_photo("prom"))
-print(album.add_photo("wedding"))
-print(album.display())
+class Library:
+    def __init__(self, name):
+        self.name = name
+        self.books: List = [Book]
+
+    def add_book(self, book: Book):
+        if book not in self.books:
+            self.books.append(book)
+            return f"Book with title {book.title} and author {book.author} successfully added to {self.name} library"
+
+        return f"This book is already in the library!"
+
+    def find_book(self, title):
+        try:
+            curr_book = next(filter(lambda b: b.title == title, self.books))
+            return curr_book
+        except StopIteration:
+            raise ValueError("This book is not in the library")
+
+
+a = Book("Harry Potter and the Philosopher's Stone", "J. K. Rowling")
+library = Library("Downtown")
+print(library.add_book(a))
+print(library.add_book(a))
+print(library.find_book("Harry Potter and the Philosopher's Stone"))
