@@ -10,7 +10,7 @@ class Controller:
         self.supplies: List[Supply] = []
 
     def __str__(self):
-        res = "\n".join([str(p.__str__()) for p in self.players])
+        res = "\n".join([str(p) for p in self.players])
 
         if self.supplies:
             res += "\n"
@@ -41,12 +41,12 @@ class Controller:
         return player
 
     def find_supply_ind_by_type(self, name: str):
-        ind = None
+
         for i in range(len(self.supplies) - 1, -1, -1):
             if self.supplies[i].__class__.__name__ == name:
-                ind = i
-                break
-        return ind
+                return i
+
+        return None
 
     def attacking(self, player_1: Player, player_2: Player):
         player_1.stamina = max(player_1.stamina - (player_2.stamina / 2), 0)
@@ -79,15 +79,14 @@ class Controller:
         player_2 = self.find_player_by_name(player_2_name)
 
         check_stamina = self.is_stamina_0(player_1, player_2)
+
         if check_stamina:
             return check_stamina
 
         if player_1.stamina > player_2.stamina:
-            result = self.attacking(player_1, player_2)
+            return self.attacking(player_1, player_2)
         else:
-            result = self.attacking(player_2, player_1)
-
-        return result
+            return self.attacking(player_2, player_1)
 
     def next_day(self):
         for player in self.players:
@@ -117,5 +116,3 @@ class Controller:
         if player_1.stamina > player_2.stamina:
             return player_1
         return player_2
-
-
