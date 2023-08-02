@@ -39,3 +39,10 @@ library = Library("Downtown")
 print(library.add_book(a))
 print(library.add_book(a))
 print(library.find_book("Harry Potter and the Philosopher's Stone"))
+
+
+
+        players_info = '\n'.join([f"Player: {player.name}, {player.age}, {player.stamina}, {player.need_sustenance}" for player in self.players])
+        supplies_info = '\n'.join([f"{supply.__class__.__name__}: {supply.name}, {supply.energy}" for supply
+                                   in self.supplies])
+        return f"{players_info}\n{supplies_info}"
