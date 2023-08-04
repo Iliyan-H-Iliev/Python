@@ -2,14 +2,7 @@ from project.horse_specification.horse import Horse
 
 
 class Appaloosa(Horse):
-    MAX_HORSE_SPEED = 120
-
-    def __init__(self, name, speed):
-        super().__init__(name, speed)
+    MAX_SPEED = 120
 
     def train(self):
-        if self.speed <= 118:
-            self.speed += 2
-        elif self.speed < 120:
-            self.speed = 120
-        
+        self.speed = min(self.speed + 2, self.MAX_SPEED)

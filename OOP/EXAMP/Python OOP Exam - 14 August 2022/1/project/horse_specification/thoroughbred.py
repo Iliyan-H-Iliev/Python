@@ -2,13 +2,8 @@ from project.horse_specification.horse import Horse
 
 
 class Thoroughbred(Horse):
-    MAX_HORSE_SPEED = 140
-
-    def __init__(self, name, speed):
-        super().__init__(name, speed)
+    MAX_SPEED = 140
 
     def train(self):
-        if self.speed <= 137:
-            self.speed += 3
-        elif self.speed < 140:
-            self.speed = 140
+        self.speed = min(self.speed + 3, self.MAX_SPEED)
+
