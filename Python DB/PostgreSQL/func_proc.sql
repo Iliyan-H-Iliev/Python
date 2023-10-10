@@ -1,0 +1,12 @@
+CREATE OR REPLACE FUNCTION func_name (
+
+) RETURNS
+AS
+$$
+DECLARE
+
+BEGIN
+
+END;
+$$
+LANGUAGE plpgsql;

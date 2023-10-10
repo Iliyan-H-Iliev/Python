@@ -1,3 +1,4 @@
+
 CREATE OR REPLACE FUNCTION fn_full_name (
 	first_name VARCHAR(50),
 	last_name VARCHAR(50)
